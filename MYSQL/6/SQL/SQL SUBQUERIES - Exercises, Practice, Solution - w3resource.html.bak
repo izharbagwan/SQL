@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html xmlns:fb="facebook.com/2008/fbml" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link type="text/css" rel="stylesheet" href="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/material.min.css">
+<link type="text/css" rel="stylesheet" href="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/additional.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="shortcut icon" href="https://www.w3resource.com/images/favicon.png">
+<meta name="Keywords" content="SQL exercises on subqueries, sql subqueries exercises  on two tables, sql subqueries on more than two tables, exercises on sql corelated subqueries, subqueries exercises on ANY, ALL, EXISTS operator, sql subqueries on HR database, sql subqueries examples on HR database, sql subquery practice exercises, sql subquery examples practice on hr database, w3resource">
+<meta name="Description" content="Practice with solution of exercises on SQL SUBQUERIES using ANY, ALL, BETWEEN, IN, AND, EXISTS operator on HR database, and more from w3resource.">
+<meta property="og:title" content="SQL SUBQUERIES - Exercises, Practice, Solution - w3resource">
+<meta property="og:description" content="Practice with solution of exercises on SQL SUBQUERIES using ANY, ALL, BETWEEN, IN, AND, EXISTS operator on HR database, and more from w3resource.">
+<meta property="og:url" content="https://www.w3resource.com/sql-exercises/subqueries/index.php">
+<meta property="og:image" content="//www.w3resource.com/w3r_images/sql-exercise.gif">
+<meta property="og:site_name" content="w3resource">
+
+
+
+
+
+
+<div class="mdl-layout__container" style="height: auto !important;"><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded" data-upgraded=",MaterialLayout">
+
+
+
+
+
+
+<main class="mdl-layout__content">
+<div class="page-content" style="height: auto !important;">
+
+
+
+<style type="text/css">
+<!--
+.style1 {font-weight: bold}
+.style2 {font-weight: bold}
+.style3 {font-weight: bold}
+.style4 {font-weight: bold}
+.style5 {font-weight: bold}
+.style6 {font-weight: bold}
+.style7 {font-weight: bold}
+.style8 {font-weight: bold}
+.style9 {font-weight: bold}
+.style10 {font-weight: bold}
+.style11 {font-weight: bold}
+.style12 {font-weight: bold}
+.style13 {font-weight: bold}
+.style14 {font-weight: bold}
+.style15 {font-weight: bold}
+.style16 {font-weight: bold}
+.style17 {font-weight: bold}
+.style18 {font-weight: bold}
+.style19 {font-weight: bold}
+.style20 {font-weight: bold}
+.style21 {font-weight: bold}
+.style22 {font-weight: bold}
+.style23 {font-weight: bold}
+.style24 {font-weight: bold}
+.style25 {font-weight: bold}
+.style26 {font-weight: bold}
+.style27 {font-weight: bold}
+.style28 {font-weight: bold}
+-->
+  </style>
+<div class="mdl-grid" style="height: auto !important;">
+
+<div class="mdl-cell mdl-card mdl-shadow--2dp through mdl-shadow--6dp mdl-cell--7-col" style="height: auto !important;">
+<article itemscope="" itemtype="http://schema.org/TechArticle">
+<style type="text/css">
+@media screen and (max-width: 1920px) {
+#h1_banner_block {display: block}
+#h1_banner_block_mobile {display: none}
+#h1_banner_mobile_smallest {display: none}
+}
+@media screen and (max-width: 600px) {
+#h1_banner_block {display: none}
+#h1_banner_block_mobile {display: block}
+#h1_banner_mobile_smallest {display: none}	
+}
+@media screen and (max-width: 480px) {
+#h1_banner_block {display: none}
+#h1_banner_block_mobile {display: none}
+#h1_banner_mobile_smallest {display: block}	
+}
+</style>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--12-col" id="h1_banner_block">
+
+
+
+<div id="bsa-zone_1634824896174-3_123456"></div>
+</div>
+<div class="mdl-cell mdl-cell--12-col" id="h1_banner_mobile_smallest">
+<script async="" src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/f(11).txt" crossorigin="anonymous" data-checked-head="true"></script>
+
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2153208817642134" data-ad-slot="5610855762" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done"></ins>
+<script>
+</script>
+</div>
+</div>
+<p><strong>1.</strong> From the following tables, write a SQL query to find all the orders issued by the salesman 'Paul Adam'. Return ord_no, purch_amt, ord_date, customer_id and salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a></p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman.html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Orders </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders.html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>2.</strong> From the following tables, write a SQL query to find all the orders, which are generated by those salespeople, who live in the city of London.Return ord_no, purch_amt, ord_date, customer_id, salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a></p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(1).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Orders</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(1).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>3.</strong> From the following tables, write a SQL query to find the orders generated by the salespeople who may work for customers whose id is 3007. Return ord_no, purch_amt, ord_date, customer_id, salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a></p>
+<p><strong>Sample table: Salesman </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(2).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Orders</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(2).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>4.</strong> From the following tables, write a SQL query to find the order values greater than the average order value of 10th October 2012. Return ord_no, purch_amt, ord_date,	customer_id, salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(3).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Orders</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(3).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>5.</strong> From the following tables, write a SQL query to find all the orders generated in New York city. Return ord_no, purch_amt, ord_date, customer_id and salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a></p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(4).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Orders </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(4).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>6.</strong> From the following tables, write a SQL query to find the commission of the salespeople work in Paris City. Return commission. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(5).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table : Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer.html" height="175" class="span12"></iframe>
+</div>
+<br>
+<p><strong>7.</strong> Write a query to display all the customers whose id is 2001 bellow the salesman ID of Mc Lyon. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(6).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table : Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(1).html" height="175" class="span12"></iframe>
+</div>
+<br>
+<p><strong>8.</strong> From the following tables, write a SQL query to count number of customers with grades above the average grades of New York City. Return grade and count. &nbsp;&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(2).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>9.</strong> From the following tables, write a SQL query to find those salespeople who earned the maximum commission. Return ord_no, purch_amt, ord_date, and salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(3).html" height="175" class="span12"></iframe>
+</div>
+<p><strong>Sample table: Orders </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(5).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: salesman </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(7).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>10.</strong> From the following tables, write a SQL query to find the customers whose orders issued on 17th August, 2012. Return ord_no, purch_amt, ord_date, customer_id, salesman_id and cust_name. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Orders </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(6).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(4).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>11.</strong> From the following tables, write a SQL query to find the salespeople who had more than one customer. Return salesman_id and name. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(5).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(8).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>12.</strong> From the following tables, write a SQL query to find those orders, which are higher than average amount of the orders. Return ord_no, purch_amt, ord_date, customer_id and salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Orders </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(7).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Customer </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(6).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>13.</strong> From the following tables, write a SQL query to find those orders, which are equal or higher than average amount of the orders. Return ord_no, purch_amt, ord_date, customer_id and salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Orders </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(8).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Customer </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(7).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>14.</strong> Write a query to find the sums of the amounts from the orders table, grouped by date, eliminating all those dates where the sum was not at least 1000.00 above the maximum order amount for that date. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Orders </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(9).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(8).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>15.</strong> Write a query to extract all data from the customer table if and only if one or more of the customers in the customer table are located in London. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Customer </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(9).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>16.</strong> From the following tables, write a SQL query to find the salespeople who deal multiple customers. Return salesman_id, name, city and commission.&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Customer </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(10).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Salesman </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(9).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>17.</strong> From the following tables, write a SQL query to find the salespeople who deal a single customer. Return salesman_id, name, city and commission. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Customer </strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(11).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(10).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>18.</strong> From the following tables, write a SQL query to find the salespeople who deal the customers with more than one order. Return salesman_id, name, city and commission. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(11).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Orders</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(10).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(12).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>19.</strong> From the following tables, write a SQL query to find the salespeople who deals those customers who live in the same city. Return salesman_id, name, city and commission.&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(12).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(13).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>20.</strong> From the following tables, write a SQL query to find the salespeople whose place of living (city) matches with any of the city where customers live. Return salesman_id, name, city and commission.&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(13).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(14).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>21.</strong> From the following tables, write a SQL query to find all those salespeople whose name exist alphabetically after the customer’s name. Return salesman_id, name, city, commission.&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(14).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(15).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>22.</strong> From the following table, write a SQL query to find all those customers who have a greater grade than any customer who belongs to the alphabetically lower than the city of New York. Return customer_id, cust_name, city, grade, salesman_id&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(16).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>23.</strong> From the following table, write a SQL query to find all those orders whose order amount greater than at least one of the orders of September 10th 2012. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Orders</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(11).html" height="175" class="span12"></iframe>
+</div> <br>
+<p><strong>24.</strong> From the following tables, write a SQL query to find those orders where an order amount less than any order amount of a customer lives in London City. Return ord_no, purch_amt, ord_date, customer_id and salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Orders</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(12).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(17).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>25.</strong> From the following tables, write a SQL query to find those orders where every order amount less than the maximum order amount of a customer lives in London City. Return ord_no, purch_amt, ord_date, customer_id and salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Orders</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(13).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(18).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>26.</strong> From the following tables, write a SQL query to find those customers whose grade are higher than customers living in New York City. Return customer_id, cust_name, city, grade and salesman_id.&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(19).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>27.</strong> From the following tables, write a SQL query to calculate the total order amount generated by a salesman. The salesman should belong to the cities where any of the customer living. Return salesman name, city and total order amount.&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Orders</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/orders(14).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Salesman</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/salesman(15).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(20).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>28.</strong> From the following tables, write a SQL query to find those customers whose grade doesn't same of those customers live in London City. Return customer_id, cust_name, city, grade and salesman_id. &nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(21).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>29.</strong> From the following tables, write a SQL query to find those customers whose grade are not same of those customers living in Paris. Return customer_id, cust_name, city, grade and salesman_id.&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a></p>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(22).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>30.</strong> From the following tables, write a SQL query to find all those customers who have different grade than any customer lives in Dallas City. Return customer_id, cust_name,city, grade and salesman_id.&nbsp;<a href="https://www.w3resource.com/sql-exercises/subqueries/index.php#SQLEDITOR">Go to the editor</a> </p>
+<p><strong>Sample table: Customer</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/customer(23).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>31.</strong> From the following tables, write a SQL query to find the average price of each manufacturer's product along with their name. Return Average Price and Company.</p>
+<p><strong>Sample table: company_mast</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/company_mast.html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: item_mast</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/item_mast.html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>32.</strong> From the following tables, write a SQL query to calculate the average price of the products and find price which are more than or equal to 350. Return Average Price and Company.</p>
+<p><strong>Sample table: company_mast</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/company_mast(1).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: item_mast</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/item_mast(1).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>33.</strong> From the following tables, write a SQL query to find the most expensive product of each company. Return Product Name, Price and Company. </p>
+<p><strong>Sample table: company_mast</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/company_mast(2).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: item_mast</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/item_mast(2).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>34.</strong> From the following tables, write a SQL query to find those employees whose last name is 'Gabriel' or 'Dosio'. Return emp_idno, emp_fname, emp_lname and emp_dept.</p>
+<p><strong>Sample table: emp_details</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_details.html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>35.</strong> From the following tables, write a SQL query to find the employees who work in department 89 or 63. Return emp_idno, emp_fname, emp_lname and emp_dept.</p>
+<p><strong>Sample table: emp_department</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_department.html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: emp_details</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_details(1).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>36.</strong> From the following tables, write a SQL query to find those employees who work for the department where the department allotment amount is more than Rs. 50000. Return emp_fname and emp_lname.</p>
+<p><strong>Sample table: emp_department</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_department(1).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: emp_details</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_details(2).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>37.</strong> From the following tables, write a SQL query to find the departments where the sanction amount is higher than the average sanction amount of all the departments. Return dpt_code, dpt_name and dpt_allotment.</p>
+<p><strong>Sample table: emp_department</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_department(2).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>38.</strong> From the following tables, write a SQL query to find the departments where more than two employees work. Return dpt_name.</p>
+<p><strong>Sample table: emp_department</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_department(3).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: emp_details</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_details(3).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>39.</strong> From the following tables, write a SQL query to find the departments where the sanction amount is second lowest. Return emp_fname and emp_lname.</p>
+<p><strong>Sample table: emp_department</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_department(4).html" height="175" class="span12"></iframe>
+</div><br>
+<p><strong>Sample table: emp_details</strong></p>
+<div class="row-fluid">
+<iframe src="./SQL SUBQUERIES - Exercises, Practice, Solution - w3resource_files/emp_details(4).html" height="175" class="span12"></iframe>
+</div><br>
+<p>&nbsp;</p>
+
+
+<div id="rs" style="overflow: scroll"></div>
+
+
+
+
+
+
+
+
